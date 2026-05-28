@@ -12,7 +12,8 @@ logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s
 # API Setup
 genai.configure(api_key=os.environ.get("GEMINI_API_KEY"))
 # v1beta లో నడిచే పాత మోడల్ టెక్స్ట్ నేమ్ ఇక్కడ ఇచ్చాను, ఇది పక్కా వర్క్ అవుతుంది
-model = genai.GenerativeModel('gemini-pro')
+model = genai.GenerativeModel('gemini-1.0-pro')
+
 
 # Dummy Web Server for Render Port Binding
 app_web = Flask(__name__)
