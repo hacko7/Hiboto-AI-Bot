@@ -45,7 +45,6 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
         except Exception:
             await update.message.reply_text("Sorry, something went wrong.")
 
-if __name__ == '__main__':
 app = Application.builder().token(os.environ.get("TELEGRAM_BOT_TOKEN")).build()
 app.add_handler(CommandHandler("start", start))
 app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_message))
